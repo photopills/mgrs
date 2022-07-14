@@ -484,7 +484,6 @@ long Convert_Transverse_Mercator_To_Geodetic (
   double eta4;
   double ftphi;   /* Footpoint latitude                              */
   int    i;       /* Loop iterator                   */
-  double s;       /* Sine of latitude                        */
   double sn;      /* Radius of curvature in the prime vertical       */
   double sr;      /* Radius of curvature in the meridian             */
   double t;       /* Tangent of latitude                             */
@@ -538,8 +537,7 @@ long Convert_Transverse_Mercator_To_Geodetic (
     /* Radius of Curvature in the meridian */
     sn = SPHSN(ftphi);
 
-    /* Sine Cosine terms */
-    s = sin(ftphi);
+    /* Cosine terms */
     c = cos(ftphi);
 
     /* Tangent Value  */
